@@ -1,0 +1,19 @@
+.description {
+  width: 60%;
+  max-width: 700px;
+}
+
+@media screen and (max-width: 768px) {
+  .description {
+    width: 100%;
+  }
+}
+
+.popular-direction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=inside-pages.css.map */

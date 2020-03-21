@@ -1,0 +1,480 @@
+.header{
+    z-index:9;
+    position: absolute;
+    width: 100%;
+    @include trn;
+    .wrapper{
+        padding-top: 40px;
+    }
+    .logo{
+        width: 20%;
+    }
+    &-menu{
+        width: 40%;
+        margin-left: 20%;
+        ul{
+            li{
+                display: inline-block;
+                margin-left: 100px;
+                &:nth-child(1){
+                    margin-left: 0px;
+                }
+                a{
+                    color:white;
+                    font-weight: 600;
+                    font-size: 15px;
+                    text-decoration: none;
+                    position: relative;
+                    &:before{
+                        content:"";
+                        width: 0%;
+                        height: 2px;
+                        background-color: $accent;
+                        position: absolute;
+                        bottom:-6px;
+                        @include trn;
+                    }
+                    &:hover::before{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .burger{
+        width: 36px;
+        height: 22px;
+        position: relative;
+        right: -17.9%;
+        cursor:pointer;
+        &__line{
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            &_top{
+                top:0%;
+                @include trn;
+                right:0;
+            }
+            &_mid{
+                @include trn;
+                top:50%;
+                right:0;
+            }
+            &_bot{
+                top:100%;
+                @include trn;
+                right:0;
+            }
+        }
+        &:hover{
+            .burger__line_bot{
+                width: 60%;
+                right:20%;
+            }
+        }
+    }
+}
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.fixedMenuOnScroll{
+    position: fixed;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #1f1f1f;
+    animation:showMenu 0.5s ease;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, .2);
+    @include trn;
+    .wrapper{
+        padding-top: 0px;
+    }
+}
+
+
+@media screen and (max-width: 1680px){
+    .header{
+        &-menu{
+            ul{
+                li{
+                    margin-left: 80px;
+                }
+            }
+        }
+        .burger{
+            right: -17.5%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1536px){
+    .header{
+        &-menu{
+            ul{
+                li{
+                    margin-left: 50px;
+                }
+            }
+        }
+        .burger{
+            right: -17.3%;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .header{
+        .burger{
+            right: -17%;
+        }
+    }
+
+    .fixedMenuOnScroll{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+    .header{
+        &-menu{
+            ul{
+                li{
+                    margin-left: 30px;
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .burger{
+            right: -16.2%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+
+    .header{
+        &-menu{
+            display: none;
+        }
+        .burger{
+            right: 0;
+        }
+    }
+    .nav{
+        justify-content: space-between;
+    }
+
+}
+
+
+@media screen and (max-width: 576px){
+
+    .header{
+        .burger{
+            margin-top: -6px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 420px){
+
+    .header{
+
+        .logo{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.mainMenu{
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    position: absolute;                  
+    background-color: $greybg;
+    position: fixed;
+    right: -100%;
+}
+
+.close-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    background-color: $accent;
+    cursor: pointer;
+    @include trn;
+    &:hover{
+        background-color: #06A9BC;
+    }
+    &-icon{
+        width: 24px;
+        height: 24px;
+        position: relative;
+    }
+    &-line{
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        top:50%;
+        @include trn;
+    }
+}
+
+
+.mainMenu{
+    
+    .content{
+        width: 100%;
+        display: flex;
+        margin-top: 300px; 
+    }
+    .services-container{
+        width: 80%;
+         .link-title{
+            font-size: 30px;
+            color:white;
+            text-decoration: none;
+            font-weight: bold;
+         }
+    }
+
+    .servcies-container-content{
+        display: flex;
+    }
+
+    .column-links{
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        width: 33%;
+        a{
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            color:white;
+            margin-top: 30px;
+            opacity: 0.6;
+            width: 100%;
+            display: inline-block;
+            @include trn;
+            &:hover{
+                opacity: 1;
+            }
+            &:nth-child(1){
+                margin-top: 0;
+            }
+        }
+    }
+    .menu-container{
+        width: 20%;
+        li{
+            margin-top: 50px;
+            &:nth-child(1){
+                margin-top: 0;
+            }
+        }
+        a{
+            font-size: 24px;
+            color:white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+
+
+    .content-mobile{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .menu-mobile{
+        width: 60%;
+        li{
+            margin-top: 50px;
+        }
+        a{
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1680px){
+
+    .mainMenu{
+        .content{
+            margin-top: 200px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1680px){
+
+    .mainMenu{
+        .content{
+            margin-top: 150px;
+        }
+    }
+
+}
+
+@media screen and (max-width:1500px){
+
+    .mainMenu{
+        .content{
+            margin-top: 100px;
+        }
+
+        .services-container{
+            width: 70%;
+        }
+
+        .column-links{
+            margin-top: 50px;
+            a{
+                font-size: 14px;
+                margin-top: 20px;
+            }
+        }
+
+        .menu-container{
+            width: 30%;
+            li{
+                margin-top: 30px;
+            }
+            a{
+                font-size: 24px;
+            }
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 1280px){
+
+    .mainMenu{
+        .content{
+            margin-top: 80px;
+        }
+
+        .services-container{
+            a{
+                font-size: 13px;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1024px){
+    .mainMenu{
+        .content{
+            display: none;
+        }
+        .content-mobile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 20px;
+        }
+        .menu-mobile{
+            a{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 786px){
+
+    .mainMenu{
+        .close{
+            right:-30px;
+            width: 80px;
+            height: 80px;
+        }
+        .menu-mobile{
+            width: 80%;
+            li{
+                margin-top: 40px;
+                a{
+                    font-size: 22px;
+                    &:nth-child(1){
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:480px){
+
+    .mainMenu{
+        .close{
+            right:-20px;
+        }
+    }
+
+} 
+
+
+@media screen and (max-width: 375px){
+
+    .mainMenu{
+        .menu-mobile{
+            width: 100%;
+        }
+    }
+
+}

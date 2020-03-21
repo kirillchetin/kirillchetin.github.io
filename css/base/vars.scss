@@ -1,0 +1,11 @@
+$title: #282828;
+$accent:#00B8CE;
+$text:#575757;
+$greybg:#2A2A2A;
+
+@mixin trn {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}

@@ -1,0 +1,71 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-color: $greybg;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &-description{
+        max-width: 800px;
+        font-size: 24px;
+        color:white;
+        margin-top: 20px;
+    }
+    .btn{
+        margin-top: 40px;
+    }
+}
+
+
+@media screen and (max-width:1600px){
+    .hero{
+        &-description{
+            max-width: 650px;
+            font-size: 18px;
+            color:white;
+            margin-top: 10px;
+        }
+        .btn{
+            margin-top: 20px;
+        }
+    }
+}
+
+
+@media screen and (max-width:1280px){
+
+    .hero{
+        &-description{
+            font-size: 16px;
+        }
+    }
+
+}
+
+
+
+
+@media screen and (max-width:768px){
+
+    .hero{
+        &-description{
+            width: 90%;
+        }
+    }
+
+}
+
+@media screen and (max-width:576px){
+
+    .hero{
+        &-description{
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+
+}

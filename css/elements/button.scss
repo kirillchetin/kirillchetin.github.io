@@ -1,0 +1,69 @@
+.btn{
+    width: 340px;
+    text-align: center;
+    a{
+        background-color: $accent;
+        font-size: 15px;
+        color:white;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @include trn;
+        &:hover{
+            background-color: #1BC7DC;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px){
+    .btn{
+        width: 300px;
+        a{
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .btn{
+        width: 280px;
+        a{
+            padding-top: 22px;
+            padding-bottom: 22px;
+        }
+    }
+}
+
+@media screen and (max-width: 420px){
+    .btn{
+        width: 100%;
+    }
+}
+
+
+.btn-link{
+    a{
+        font-size: 18px;
+        font-weight: 600;
+        color:$title;
+        position: relative;
+        text-decoration: none;
+        &::before{
+            content:"";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom:-6px;
+            background-color: $accent;
+            @include trn;
+        }
+        &:hover::before{
+            width: 50%;
+        }
+    }
+}

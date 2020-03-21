@@ -1,0 +1,172 @@
+.services{
+    .content{
+        margin-top: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .btn{
+        margin-top: 60px;
+    }
+
+    .services-card{
+        width: 32%;
+        height: 300px;
+        padding-top: 60px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border:2px solid #E5E5E5;
+        background-color: #fff;
+        text-decoration: none;
+        outline:none;
+        @include trn;
+        &:hover{
+            border-color: $accent;
+        }
+        &:focus{
+            border-color:$accent;
+        }
+        img{
+            width: 400px;
+        }
+    }
+
+    .services-card-big{
+        width: 49%;
+        img{
+            width: 450px;
+        }
+    }
+
+    .mt{
+        margin-top: 30px;
+    }
+
+
+    &-inside{
+        padding-bottom: 150px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1680px){
+
+    .services{
+        .services-card{
+            height: 260px;
+            img{
+                width: 340px;
+            }
+        }
+    }
+
+    .mt{
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1440px){
+
+    .services{
+        .services-card{
+            img{
+                width: 300px;
+            }
+        }
+
+        .btn{
+            margin-top: 50px;
+        }
+
+        .mt{
+            margin-top: 22px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1280px){
+
+    .services{
+        .services-card{
+            height: 220px;
+            padding-top: 40px;
+            padding-left: 30px; 
+            padding-bottom: 30px;
+            img{
+                width: 280px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1100px){
+    .services{
+        .services-card{
+            img{
+                width: 220px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px){
+    .services{
+        .services-card{
+            width: 100%;
+            img{
+                width: 290px;
+            }
+            margin-top: 20px;
+            &:nth-child(1){
+                margin-top: 0;
+            }
+        }
+        .content{
+            margin-top: 40px;
+        }
+        .btn{
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 420px){
+    .services{
+        .services-card{
+            height: 180px;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            margin-top: 10px;  
+            img{
+                width: 260px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    .services{
+        .content{
+            margin-top: 30px;
+        }
+        .services-card{
+            height: 160px;
+            img{
+                width: 220px;
+            }
+        }
+    }
+}

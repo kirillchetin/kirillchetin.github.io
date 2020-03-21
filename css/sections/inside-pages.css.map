@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAA;EACR,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,KAAK;CACnB;;AAGD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAC/B,AAAA,YAAY,CAAA;IACR,KAAK,EAAE,IAAI;GACd;;;AAIL,AAAA,kBAAkB,CAAA;EACd,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;CAClB",
+    "sources": [
+        "inside-pages.scss"
+    ],
+    "names": [],
+    "file": "inside-pages.css"
+}
